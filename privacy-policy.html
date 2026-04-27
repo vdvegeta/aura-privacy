@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuraSense — Política de Privacidad / Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0a0014;
+      --card: #130023;
+      --border: rgba(168, 85, 247, 0.25);
+      --accent: #a855f7;
+      --accent2: #06b6d4;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --glow: rgba(168, 85, 247, 0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .stars {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 35%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 90%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 55%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 15% 75%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 60% 40%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 15%, rgba(255,255,255,0.6) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container {
+      position: relative; z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .logo-glow {
+      display: inline-block;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      filter: drop-shadow(0 0 18px rgba(168,85,247,0.8));
+    }
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #c084fc, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.4rem;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 1.5rem 0 0;
+    }
+    .lang-btn {
+      padding: 0.35rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.6rem 1.8rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 4px 24px var(--glow);
+    }
+    .section-card h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #c084fc;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-card p {
+      color: var(--text);
+      font-size: 0.93rem;
+      margin-bottom: 0.6rem;
+    }
+    .section-card p:last-child { margin-bottom: 0; }
+    .warning-card {
+      background: rgba(239, 68, 68, 0.08);
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+    .warning-card h2 { color: #f87171; }
+    .age-card {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+    .age-card h2 { color: #fbbf24; }
+    .email-link {
+      color: var(--accent2);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .email-link:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .version-badge {
+      display: inline-block;
+      background: rgba(168,85,247,0.15);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.2rem 0.8rem;
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-top: 0.5rem;
+    }
+    [lang-content] { display: none; }
+    [lang-content].visible { display: block; }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="container">
+    <header>
+      <div class="logo-glow">✨</div>
+      <h1>AuraSense</h1>
+      <p class="subtitle" id="subtitle-es">Política de Privacidad</p>
+      <p class="subtitle" id="subtitle-en" style="display:none">Privacy Policy</p>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('es')">🇪🇸 Español</button>
+        <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
+      </div>
+    </header>
+
+    <!-- ===== ESPAÑOL ===== -->
+    <div id="content-es">
+
+      <div class="section-card">
+        <h2>🧪 Metodología y Ciencia</h2>
+        <p>AuraSense combina tres fuentes de datos para generar tu lectura energética: efemérides astronómicas reales (NASA/JPL) para el contexto astral, análisis de imagen mediante inteligencia artificial para inferir tu estado energético, y arquetipos de psicología analítica junguiana para el perfil de personalidad.</p>
+        <p>El resultado es un mapa simbólico del momento — no una medición científica literal.</p>
+      </div>
+
+      <div class="section-card warning-card">
+        <h2>⚠️ Aviso Legal Importante</h2>
+        <p>AuraSense es una herramienta de autoconocimiento, reflexión personal y entretenimiento. Las interpretaciones son de naturaleza simbólica y no tienen validez clínica ni científica comprobada.</p>
+        <p>Los resultados NO constituyen diagnóstico médico, psicológico ni asesoramiento profesional de ningún tipo. Si tienes preocupaciones de salud, consulta siempre a un profesional cualificado.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>🔒 Tu Privacidad</h2>
+        <p>Tus datos personales (nombre, diario, configuración) se guardan exclusivamente en tu dispositivo mediante almacenamiento local seguro. AuraSense no tiene servidores propios ni almacena información tuya de forma permanente.</p>
+      </div>
+
+      <div class="section-card age-card">
+        <h2>🔞 Edad Mínima</h2>
+        <p>AuraSense está diseñado para usuarios de 13 años o más. No recopilamos intencionalmente datos personales de menores de 13 años.</p>
+        <p>Si eres padre o tutor y crees que tu hijo ha proporcionado información personal, contáctanos para eliminarla. El registro bloquea el acceso a menores de 13 años.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>🤖 Procesamiento por Inteligencia Artificial</h2>
+        <p>Para generar los análisis, AuraSense envía temporalmente tus fotos y texto a servicios externos de IA (Google Gemini y DeepSeek). Este procesamiento es puntual: las imágenes se usan únicamente para el análisis inmediato y no se almacenan en dichos servicios.</p>
+        <p>Al usar la app aceptas estas condiciones de procesamiento.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>💾 Copia de Seguridad</h2>
+        <p>Todos tus datos viven en tu dispositivo. Si desinstelas la app, formateas el teléfono o lo pierdes, tus datos se perderán permanentemente.</p>
+        <p>Te recomendamos exportar tu Diario a PDF regularmente desde la sección Diario → Exportar.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>🛠️ Ayuda y Contacto</h2>
+        <p>¿Tienes algún problema o sugerencia? Escríbenos a: <a href="mailto:soporte@aurasense.app" class="email-link">soporte@aurasense.app</a></p>
+        <p>Respondemos en 24–48 horas. Para errores técnicos, describe qué estabas haciendo cuando ocurrió el problema y el modelo de tu dispositivo.</p>
+      </div>
+
+    </div><!-- /content-es -->
+
+    <!-- ===== ENGLISH ===== -->
+    <div id="content-en" style="display:none">
+
+      <div class="section-card">
+        <h2>🧪 Methodology &amp; Science</h2>
+        <p>AuraSense combines three data sources to generate your energy reading: real astronomical ephemeris (NASA/JPL) for astral context, AI-powered image analysis to infer your energetic state, and Jungian analytical psychology archetypes for your personality profile.</p>
+        <p>The result is a symbolic map of the moment — not a literal scientific measurement.</p>
+      </div>
+
+      <div class="section-card warning-card">
+        <h2>⚠️ Important Legal Notice</h2>
+        <p>AuraSense is a tool for self-knowledge, personal reflection, and entertainment. Interpretations are symbolic in nature and have no proven clinical or scientific validity.</p>
+        <p>Results do NOT constitute medical, psychological, or professional advice of any kind. If you have health concerns, always consult a qualified professional.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>🔒 Your Privacy</h2>
+        <p>Your personal data (name, journal, settings) is stored exclusively on your device using secure local storage. AuraSense has no proprietary servers and does not permanently store any of your information.</p>
+      </div>
+
+      <div class="section-card age-card">
+        <h2>🔞 Minimum Age</h2>
+        <p>AuraSense is designed for users aged 13 and older. We do not knowingly collect personal data from children under 13.</p>
+        <p>If you are a parent or guardian and believe your child has provided personal information, please contact us to have it removed. Registration blocks access to users under 13.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>🤖 AI Processing</h2>
+        <p>To generate analyses, AuraSense temporarily sends your photos and text to external AI services (Google Gemini and DeepSeek). This processing is momentary: images are used only for the immediate analysis and are not stored by those services.</p>
+        <p>By using the app you accept these processing terms.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>💾 Backup</h2>
+        <p>All your data lives on your device. If you uninstall the app, reset your phone, or lose it, your data will be permanently lost.</p>
+        <p>We recommend exporting your Journal to PDF regularly from Journal → Export.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>🛠️ Help &amp; Contact</h2>
+        <p>Have a problem or suggestion? Write to us at: <a href="mailto:support@aurasense.app" class="email-link">support@aurasense.app</a></p>
+        <p>We respond within 24–48 hours. For technical issues, please describe what you were doing when the problem occurred and your device model.</p>
+      </div>
+
+    </div><!-- /content-en -->
+
+    <footer>
+      <p id="footer-es">Última actualización: Abril 2026</p>
+      <p id="footer-en" style="display:none">Last updated: April 2026</p>
+      <div class="version-badge">AuraSense v1.9.26</div>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      const isEs = lang === 'es';
+      document.getElementById('content-es').style.display = isEs ? 'block' : 'none';
+      document.getElementById('content-en').style.display = isEs ? 'none' : 'block';
+      document.getElementById('subtitle-es').style.display = isEs ? 'block' : 'none';
+      document.getElementById('subtitle-en').style.display = isEs ? 'none' : 'block';
+      document.getElementById('footer-es').style.display = isEs ? 'block' : 'none';
+      document.getElementById('footer-en').style.display = isEs ? 'none' : 'block';
+      document.querySelectorAll('.lang-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', (i === 0) === isEs);
+      });
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
