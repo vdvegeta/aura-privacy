@@ -15,7 +15,13 @@
       --muted: #94a3b8;
       --glow: rgba(168, 85, 247, 0.15);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background: var(--bg);
       color: var(--text);
@@ -23,8 +29,13 @@
       line-height: 1.7;
       min-height: 100vh;
     }
+
     .stars {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-image:
         radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6) 0%, transparent 100%),
         radial-gradient(1px 1px at 25% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
@@ -39,24 +50,29 @@
       pointer-events: none;
       z-index: 0;
     }
+
     .container {
-      position: relative; z-index: 1;
-      max-width: 780px;
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
       margin: 0 auto;
       padding: 2rem 1.5rem 4rem;
     }
+
     header {
       text-align: center;
       padding: 3rem 0 2.5rem;
       border-bottom: 1px solid var(--border);
       margin-bottom: 2.5rem;
     }
+
     .logo-glow {
       display: inline-block;
       font-size: 3rem;
       margin-bottom: 0.5rem;
       filter: drop-shadow(0 0 18px rgba(168,85,247,0.8));
     }
+
     h1 {
       font-size: 1.9rem;
       font-weight: 700;
@@ -66,16 +82,19 @@
       background-clip: text;
       margin-bottom: 0.4rem;
     }
+
     .subtitle {
       color: var(--muted);
       font-size: 0.9rem;
     }
+
     .lang-toggle {
       display: flex;
       justify-content: center;
       gap: 0.75rem;
       margin: 1.5rem 0 0;
     }
+
     .lang-btn {
       padding: 0.35rem 1.1rem;
       border-radius: 999px;
@@ -86,11 +105,14 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-    .lang-btn.active, .lang-btn:hover {
+
+    .lang-btn.active,
+    .lang-btn:hover {
       background: var(--accent);
       border-color: var(--accent);
       color: white;
     }
+
     .section-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -99,6 +121,7 @@
       margin-bottom: 1.25rem;
       box-shadow: 0 4px 24px var(--glow);
     }
+
     .section-card h2 {
       font-size: 1.05rem;
       font-weight: 600;
@@ -108,33 +131,54 @@
       align-items: center;
       gap: 0.5rem;
     }
+
     .section-card p {
       color: var(--text);
       font-size: 0.93rem;
       margin-bottom: 0.6rem;
     }
-    .section-card p:last-child { margin-bottom: 0; }
+
+    .section-card p:last-child {
+      margin-bottom: 0;
+    }
+
     .warning-card {
       background: rgba(239, 68, 68, 0.08);
       border-color: rgba(239, 68, 68, 0.3);
     }
-    .warning-card h2 { color: #f87171; }
+
+    .warning-card h2 {
+      color: #f87171;
+    }
+
     .age-card {
       background: rgba(245, 158, 11, 0.08);
       border-color: rgba(245, 158, 11, 0.3);
     }
-    .age-card h2 { color: #fbbf24; }
+
+    .age-card h2 {
+      color: #fbbf24;
+    }
+
     .legal-card {
       background: rgba(6, 182, 212, 0.06);
       border-color: rgba(6, 182, 212, 0.25);
     }
-    .legal-card h2 { color: #22d3ee; }
+
+    .legal-card h2 {
+      color: #22d3ee;
+    }
+
     .email-link {
       color: var(--accent2);
       text-decoration: none;
       font-weight: 500;
     }
-    .email-link:hover { text-decoration: underline; }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -143,6 +187,7 @@
       padding-top: 1.5rem;
       border-top: 1px solid var(--border);
     }
+
     .version-badge {
       display: inline-block;
       background: rgba(168,85,247,0.15);
@@ -153,18 +198,19 @@
       color: var(--accent);
       margin-top: 0.5rem;
     }
-    [lang-content] { display: none; }
-    [lang-content].visible { display: block; }
   </style>
 </head>
+
 <body>
   <div class="stars"></div>
+
   <div class="container">
     <header>
       <div class="logo-glow">✨</div>
       <h1>LuminAura</h1>
       <p class="subtitle" id="subtitle-es">Política de Privacidad</p>
       <p class="subtitle" id="subtitle-en" style="display:none">Privacy Policy</p>
+
       <div class="lang-toggle">
         <button class="lang-btn active" onclick="setLang('es')">🇪🇸 Español</button>
         <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
@@ -176,126 +222,194 @@
 
       <div class="section-card">
         <h2>🧪 Metodología y Ciencia</h2>
-        <p>LuminAura combina tres fuentes de datos para generar tu lectura energética: efemérides astronómicas reales (NASA/JPL) para el contexto astral, análisis de imagen mediante inteligencia artificial para inferir tu estado energético, y arquetipos de psicología analítica junguiana para el perfil de personalidad.</p>
-        <p>El resultado es un mapa simbólico del momento — no una medición científica literal.</p>
+        <p>LuminAura combina diferentes fuentes de información para generar una lectura simbólica y personalizada: datos astronómicos, análisis de imagen mediante inteligencia artificial y arquetipos inspirados en la psicología analítica junguiana.</p>
+        <p>El resultado es un mapa simbólico del momento. No debe interpretarse como una medición científica literal ni como una evaluación objetiva de tu estado físico, psicológico o emocional.</p>
       </div>
 
       <div class="section-card warning-card">
         <h2>⚠️ Aviso Legal Importante</h2>
-        <p>LuminAura es una herramienta de autoconocimiento, reflexión personal y entretenimiento. Las interpretaciones son de naturaleza simbólica y no tienen validez clínica ni científica comprobada.</p>
-        <p>Los resultados NO constituyen diagnóstico médico, psicológico ni asesoramiento profesional de ningún tipo. Si tienes preocupaciones de salud, consulta siempre a un profesional cualificado.</p>
-      </div>
-
-      <div class="section-card">
-        <h2>🔒 Tu Privacidad</h2>
-        <p>Tus datos personales (nombre, diario, configuración) se guardan exclusivamente en tu dispositivo mediante almacenamiento local seguro. LuminAura no tiene servidores propios ni almacena información tuya de forma permanente.</p>
-      </div>
-
-      <div class="section-card age-card">
-        <h2>🔞 Edad Mínima</h2>
-        <p>LuminAura está dirigida a usuarios de 14 años o más. No recopilamos intencionalmente datos personales de menores de 14 años.</p>
-        <p>Si eres menor de 14 años, no debes utilizar la aplicación ni proporcionar datos personales.</p>
-        <p>Si eres padre, madre o tutor legal y crees que un menor nos ha proporcionado información personal, puedes contactarnos para solicitar su eliminación.</p>
-      </div>
-
-      <div class="section-card legal-card">
-        <h2>⚖️ Cumplimiento Legal</h2>
-        <p><strong>COPPA (EE.UU.):</strong> LuminAura cumple con la Children's Online Privacy Protection Act. Dado que todos los datos se almacenan localmente en el dispositivo del usuario y nuestra edad mínima es 14 años, el riesgo de tratamiento de datos de menores es mínimo. Si crees que un menor ha utilizado la app, contáctanos en <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a>.</p>
-        <p><strong>GDPR (Europa):</strong> Los datos personales se almacenan exclusivamente en tu dispositivo. Puedes eliminarlos en cualquier momento desde Perfil → Eliminar todos mis datos. Para cualquier otra consulta sobre privacidad, contáctanos en <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a>.</p>
-        <p><strong>CCPA (California, EE.UU.):</strong> Los residentes de California pueden eliminar sus datos directamente desde la app (Perfil → Eliminar todos mis datos). LuminAura no vende datos personales a terceros bajo ninguna circunstancia.</p>
+        <p>LuminAura es una herramienta de autoconocimiento, reflexión personal y entretenimiento. Las interpretaciones generadas por la app son de naturaleza simbólica y no tienen validez clínica, médica, psicológica ni científica comprobada.</p>
+        <p>Los resultados no constituyen diagnóstico médico, psicológico, terapéutico, legal, financiero ni asesoramiento profesional de ningún tipo.</p>
+        <p>Si tienes preocupaciones relacionadas con tu salud física, mental o emocional, consulta siempre con un profesional cualificado.</p>
       </div>
 
       <div class="section-card legal-card">
         <h2>👤 Responsable del Tratamiento</h2>
-        <p>Responsable: LuminAura (proyecto independiente).</p>
+        <p>Responsable: LuminAura, proyecto independiente.</p>
         <p>País: España.</p>
         <p>Contacto en materia de privacidad: <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a></p>
         <p>Esta dirección puede utilizarse para ejercer derechos de acceso, rectificación, eliminación, oposición, limitación del tratamiento, portabilidad y retirada del consentimiento cuando proceda.</p>
       </div>
 
       <div class="section-card">
+        <h2>🔒 Tu Privacidad</h2>
+        <p>LuminAura almacena la mayor parte de la información de uso directamente en tu dispositivo, incluyendo datos como nombre, diario, configuración y preferencias de la aplicación.</p>
+        <p>No obstante, determinadas funcionalidades, como la generación de análisis mediante inteligencia artificial, pueden requerir el envío puntual de fotos, textos u otros datos introducidos por el usuario a proveedores externos para generar el resultado solicitado.</p>
+        <p>LuminAura no vende tus datos personales ni los utiliza para publicidad personalizada o creación de perfiles comerciales.</p>
+      </div>
+
+      <div class="section-card legal-card">
+        <h2>📌 Base Legal del Tratamiento</h2>
+        <p>El tratamiento de los datos necesarios para el funcionamiento básico de la app se basa en la prestación del servicio solicitado por el usuario.</p>
+        <p>El tratamiento de fotos, textos u otros datos mediante servicios externos de inteligencia artificial se basa en el consentimiento explícito del usuario, solicitado durante el registro o antes de utilizar dichas funcionalidades.</p>
+        <p>Puedes retirar este consentimiento en cualquier momento desde Perfil → Privacidad. La retirada del consentimiento no afecta a los tratamientos realizados previamente.</p>
+      </div>
+
+      <div class="section-card age-card">
+        <h2>🔞 Edad Mínima</h2>
+        <p>LuminAura está dirigida a usuarios de 14 años o más.</p>
+        <p>No recopilamos intencionalmente datos personales de menores de 14 años.</p>
+        <p>Si eres menor de 14 años, no debes utilizar la aplicación ni proporcionar datos personales.</p>
+        <p>Si eres padre, madre o tutor legal y crees que un menor nos ha proporcionado información personal, puedes contactarnos para solicitar su eliminación.</p>
+      </div>
+
+      <div class="section-card">
         <h2>🤖 Procesamiento por Inteligencia Artificial</h2>
-        <p>Para generar los análisis, LuminAura envía temporalmente tus fotos y texto a proveedores externos de servicios de inteligencia artificial. Este procesamiento es puntual: los datos se usan únicamente para el análisis inmediato y no se almacenan de forma permanente en dichos servicios.</p>
-        <p>Algunos de estos proveedores pueden estar ubicados fuera del Espacio Económico Europeo. En tal caso, la transferencia se realiza bajo tu consentimiento explícito otorgado al registrarte, de conformidad con el artículo 49(1)(a) del RGPD.</p>
-        <p>Al registrarte en la app has aceptado expresamente este procesamiento mediante consentimiento explícito. Puedes revocar este consentimiento en cualquier momento desde Perfil → Privacidad.</p>
+        <p>Para generar determinados análisis, LuminAura puede enviar de forma puntual tus fotos, textos u otros datos introducidos en la app a proveedores externos de servicios de inteligencia artificial.</p>
+        <p>La finalidad de este tratamiento es exclusivamente generar el análisis solicitado por el usuario dentro de la aplicación.</p>
+        <p>Los proveedores externos pueden tratar la información conforme a sus propias condiciones, acuerdos de tratamiento de datos y políticas de privacidad aplicables.</p>
+        <p>El tratamiento mediante servicios externos de IA requiere tu consentimiento explícito. Puedes retirar este consentimiento en cualquier momento desde Perfil → Privacidad. Si lo retiras, algunas funcionalidades de análisis podrían dejar de estar disponibles.</p>
+        <p>LuminAura no conserva las fotos ni textos enviados más tiempo del necesario para generar el análisis, salvo que decidas guardarlos expresamente en tu dispositivo.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>🌐 Proveedores Externos y Transferencias Internacionales</h2>
+        <p>Para prestar determinadas funcionalidades, LuminAura puede utilizar proveedores externos de inteligencia artificial, infraestructura técnica, distribución de aplicaciones, gestión de compras integradas, analítica técnica o soporte.</p>
+        <p>Algunos proveedores externos pueden estar ubicados fuera del Espacio Económico Europeo o tratar datos desde otros países.</p>
+        <p>Cuando sea necesario realizar transferencias internacionales de datos, se aplicarán las garantías previstas por la normativa aplicable, como decisiones de adecuación, cláusulas contractuales tipo u otros mecanismos legalmente válidos.</p>
+      </div>
+
+      <div class="section-card legal-card">
+        <h2>⚖️ Derechos de los Usuarios</h2>
+        <p>Si resides en la Unión Europea, puedes solicitar el acceso, rectificación, eliminación, oposición, limitación del tratamiento y portabilidad de tus datos personales cuando proceda.</p>
+        <p>También puedes retirar tu consentimiento en cualquier momento cuando el tratamiento se base en dicho consentimiento.</p>
+        <p>Para ejercer estos derechos, puedes escribirnos a <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a>.</p>
+        <p>Asimismo, tienes derecho a presentar una reclamación ante la autoridad de protección de datos competente si consideras que el tratamiento de tus datos no se ajusta a la normativa aplicable.</p>
+      </div>
+
+      <div class="section-card legal-card">
+        <h2>⚖️ Cumplimiento Legal</h2>
+        <p><strong>GDPR / RGPD (Europa):</strong> LuminAura trata los datos personales de acuerdo con los principios de minimización, transparencia, limitación de la finalidad y seguridad. Puedes eliminar los datos locales desde Perfil → Eliminar todos mis datos.</p>
+        <p><strong>COPPA (EE. UU.):</strong> LuminAura no está dirigida a menores de 14 años y no recopila intencionalmente datos personales de menores. Si crees que un menor nos ha proporcionado datos personales, contáctanos para solicitar su eliminación.</p>
+        <p><strong>CCPA / CPRA (California, EE. UU.):</strong> LuminAura no vende datos personales a terceros. Los usuarios pueden solicitar información o eliminación de sus datos personales escribiendo a <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a>.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>⏳ Conservación de Datos</h2>
+        <p>Los datos almacenados localmente permanecen en tu dispositivo hasta que los elimines, desinstales la app o borres los datos de la aplicación.</p>
+        <p>Los datos enviados para generar análisis mediante IA se tratan durante el tiempo necesario para prestar la funcionalidad solicitada, sin perjuicio de los periodos técnicos, legales o de seguridad que puedan aplicar los proveedores externos conforme a sus propias condiciones.</p>
       </div>
 
       <div class="section-card">
         <h2>💾 Copia de Seguridad</h2>
-        <p>Todos tus datos viven en tu dispositivo. Si desinstelas la app, formateas el teléfono o lo pierdes, tus datos se perderán permanentemente.</p>
+        <p>Los datos almacenados localmente viven en tu dispositivo. Si desinstalas la app, formateas el teléfono o lo pierdes, dichos datos podrían perderse permanentemente.</p>
         <p>Te recomendamos exportar tu Diario a PDF regularmente desde la sección Diario → Exportar.</p>
       </div>
 
       <div class="section-card">
         <h2>🛠️ Ayuda y Contacto</h2>
-        <p>¿Tienes algún problema o sugerencia? Escríbenos a: <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a></p>
-        <p>Respondemos en 24–48 horas. Para errores técnicos, describe qué estabas haciendo cuando ocurrió el problema y el modelo de tu dispositivo.</p>
+        <p>¿Tienes algún problema, consulta o solicitud relacionada con privacidad? Escríbenos a: <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a></p>
+        <p>Respondemos habitualmente en 24–48 horas. Para errores técnicos, describe qué estabas haciendo cuando ocurrió el problema y el modelo de tu dispositivo.</p>
       </div>
 
-    </div><!-- /content-es -->
+    </div>
 
     <!-- ===== ENGLISH ===== -->
     <div id="content-en" style="display:none">
 
       <div class="section-card">
         <h2>🧪 Methodology &amp; Science</h2>
-        <p>LuminAura combines three data sources to generate your energy reading: real astronomical ephemeris (NASA/JPL) for astral context, AI-powered image analysis to infer your energetic state, and Jungian analytical psychology archetypes for your personality profile.</p>
-        <p>The result is a symbolic map of the moment — not a literal scientific measurement.</p>
+        <p>LuminAura combines different sources of information to generate a symbolic and personalized reading: astronomical data, AI-powered image analysis, and archetypes inspired by Jungian analytical psychology.</p>
+        <p>The result is a symbolic map of the moment. It should not be understood as a literal scientific measurement or as an objective assessment of your physical, psychological, or emotional state.</p>
       </div>
 
       <div class="section-card warning-card">
         <h2>⚠️ Important Legal Notice</h2>
-        <p>LuminAura is a tool for self-knowledge, personal reflection, and entertainment. Interpretations are symbolic in nature and have no proven clinical or scientific validity.</p>
-        <p>Results do NOT constitute medical, psychological, or professional advice of any kind. If you have health concerns, always consult a qualified professional.</p>
-      </div>
-
-      <div class="section-card">
-        <h2>🔒 Your Privacy</h2>
-        <p>Your personal data (name, journal, settings) is stored exclusively on your device using secure local storage. LuminAura has no proprietary servers and does not permanently store any of your information.</p>
-      </div>
-
-      <div class="section-card age-card">
-        <h2>🔞 Minimum Age</h2>
-        <p>LuminAura is designed for users aged 14 and older. We do not knowingly collect personal data from children under 14.</p>
-        <p>If you are under 14 years of age, you must not use this application or provide any personal data.</p>
-        <p>If you are a parent, guardian or legal representative and believe a minor has provided us with personal information, please contact us to request its removal.</p>
-      </div>
-
-      <div class="section-card legal-card">
-        <h2>⚖️ Legal Compliance</h2>
-        <p><strong>COPPA (USA):</strong> LuminAura complies with the Children's Online Privacy Protection Act. Since all data is stored locally on the user's device and our minimum age is 14, the risk of processing minors' data is minimal. If you believe a minor has used the app, contact us at <a href="mailto:support@luminaura.app" class="email-link">support@luminaura.app</a>.</p>
-        <p><strong>GDPR (Europe):</strong> Personal data is stored exclusively on your device. You can delete it at any time from Profile → Delete all my data. For any other privacy enquiry, contact us at <a href="mailto:support@luminaura.app" class="email-link">support@luminaura.app</a>.</p>
-        <p><strong>CCPA (California, USA):</strong> California residents can delete their data directly from the app (Profile → Delete all my data). LuminAura does not sell personal data to third parties under any circumstances.</p>
+        <p>LuminAura is a tool for self-knowledge, personal reflection, and entertainment. The interpretations generated by the app are symbolic in nature and have no proven clinical, medical, psychological, or scientific validity.</p>
+        <p>The results do not constitute medical, psychological, therapeutic, legal, financial, or professional advice of any kind.</p>
+        <p>If you have concerns about your physical, mental, or emotional health, always consult a qualified professional.</p>
       </div>
 
       <div class="section-card legal-card">
         <h2>👤 Data Controller</h2>
-        <p>Controller: LuminAura (independent project).</p>
+        <p>Controller: LuminAura, independent project.</p>
         <p>Country: Spain.</p>
-        <p>Privacy contact: <a href="mailto:support@luminaura.app" class="email-link">support@luminaura.app</a></p>
-        <p>This address may be used to exercise rights of access, rectification, erasure, objection, restriction of processing, portability, and withdrawal of consent where applicable.</p>
+        <p>Privacy contact: <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a></p>
+        <p>This address may be used to exercise rights of access, rectification, deletion, objection, restriction of processing, portability, and withdrawal of consent where applicable.</p>
       </div>
 
       <div class="section-card">
-        <h2>🤖 AI Processing</h2>
-        <p>To generate analyses, LuminAura temporarily sends your photos and text to external artificial intelligence service providers. This processing is momentary: data is used only for the immediate analysis and is not stored permanently by those services.</p>
-        <p>Some of these providers may be located outside the European Economic Area. In such cases, the transfer is carried out under your explicit consent given at registration, in accordance with Article 49(1)(a) of the GDPR.</p>
-        <p>By registering in the app you have explicitly accepted this processing via a consent checkbox. You can revoke this consent at any time from Profile → Privacy.</p>
+        <h2>🔒 Your Privacy</h2>
+        <p>LuminAura stores most usage information directly on your device, including data such as name, journal, settings, and app preferences.</p>
+        <p>However, certain features, such as the generation of AI-powered analyses, may require the temporary sending of photos, texts, or other user-provided data to external providers in order to generate the requested result.</p>
+        <p>LuminAura does not sell your personal data or use it for personalized advertising or commercial profiling.</p>
+      </div>
+
+      <div class="section-card legal-card">
+        <h2>📌 Legal Basis for Processing</h2>
+        <p>The processing of data necessary for the basic operation of the app is based on providing the service requested by the user.</p>
+        <p>The processing of photos, texts, or other data through external artificial intelligence services is based on the user's explicit consent, requested during registration or before using such features.</p>
+        <p>You may withdraw this consent at any time from Profile → Privacy. Withdrawal of consent does not affect processing carried out before the withdrawal.</p>
+      </div>
+
+      <div class="section-card age-card">
+        <h2>🔞 Minimum Age</h2>
+        <p>LuminAura is intended for users aged 14 or older.</p>
+        <p>We do not knowingly collect personal data from children under 14.</p>
+        <p>If you are under 14, you must not use the app or provide personal data.</p>
+        <p>If you are a parent or legal guardian and believe that a minor has provided us with personal information, you may contact us to request its deletion.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>🤖 Artificial Intelligence Processing</h2>
+        <p>To generate certain analyses, LuminAura may temporarily send your photos, texts, or other data entered in the app to external artificial intelligence service providers.</p>
+        <p>The purpose of this processing is exclusively to generate the analysis requested by the user within the application.</p>
+        <p>External providers may process the information according to their own terms, data processing agreements, and applicable privacy policies.</p>
+        <p>Processing through external AI services requires your explicit consent. You may withdraw this consent at any time from Profile → Privacy. If you withdraw it, some analysis features may no longer be available.</p>
+        <p>LuminAura does not keep submitted photos or texts longer than necessary to generate the analysis, unless you expressly choose to save them on your device.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>🌐 External Providers and International Transfers</h2>
+        <p>To provide certain features, LuminAura may use external providers of artificial intelligence, technical infrastructure, app distribution, in-app purchase management, technical analytics, or support.</p>
+        <p>Some external providers may be located outside the European Economic Area or may process data from other countries.</p>
+        <p>Where international data transfers are necessary, the safeguards required by applicable law will be applied, such as adequacy decisions, standard contractual clauses, or other legally valid mechanisms.</p>
+      </div>
+
+      <div class="section-card legal-card">
+        <h2>⚖️ User Rights</h2>
+        <p>If you reside in the European Union, you may request access, rectification, deletion, objection, restriction of processing, and portability of your personal data where applicable.</p>
+        <p>You may also withdraw your consent at any time where processing is based on consent.</p>
+        <p>To exercise these rights, you may contact us at <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a>.</p>
+        <p>You also have the right to lodge a complaint with the competent data protection authority if you believe that the processing of your data does not comply with applicable law.</p>
+      </div>
+
+      <div class="section-card legal-card">
+        <h2>⚖️ Legal Compliance</h2>
+        <p><strong>GDPR (Europe):</strong> LuminAura processes personal data according to the principles of minimization, transparency, purpose limitation, and security. You can delete local data from Profile → Delete all my data.</p>
+        <p><strong>COPPA (USA):</strong> LuminAura is not intended for children under 14 and does not knowingly collect personal data from minors. If you believe that a minor has provided us with personal data, contact us to request deletion.</p>
+        <p><strong>CCPA / CPRA (California, USA):</strong> LuminAura does not sell personal data to third parties. Users may request information or deletion of their personal data by writing to <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a>.</p>
+      </div>
+
+      <div class="section-card">
+        <h2>⏳ Data Retention</h2>
+        <p>Locally stored data remains on your device until you delete it, uninstall the app, or clear the application's data.</p>
+        <p>Data sent to generate AI analyses is processed for the time necessary to provide the requested functionality, without prejudice to any technical, legal, or security retention periods that may apply to external providers under their own terms.</p>
       </div>
 
       <div class="section-card">
         <h2>💾 Backup</h2>
-        <p>All your data lives on your device. If you uninstall the app, reset your phone, or lose it, your data will be permanently lost.</p>
+        <p>Locally stored data lives on your device. If you uninstall the app, reset your phone, or lose it, such data may be permanently lost.</p>
         <p>We recommend exporting your Journal to PDF regularly from Journal → Export.</p>
       </div>
 
       <div class="section-card">
         <h2>🛠️ Help &amp; Contact</h2>
-        <p>Have a problem or suggestion? Write to us at: <a href="mailto:support@luminaura.app" class="email-link">support@luminaura.app</a></p>
-        <p>We respond within 24–48 hours. For technical issues, please describe what you were doing when the problem occurred and your device model.</p>
+        <p>Do you have a problem, question, or privacy request? Write to us at: <a href="mailto:soporte@luminaura.app" class="email-link">soporte@luminaura.app</a></p>
+        <p>We usually respond within 24–48 hours. For technical issues, please describe what you were doing when the problem occurred and your device model.</p>
       </div>
 
-    </div><!-- /content-en -->
+    </div>
 
     <footer>
       <p id="footer-es">Última actualización: Mayo 2026</p>
@@ -313,8 +427,8 @@
       document.getElementById('subtitle-en').style.display = isEs ? 'none' : 'block';
       document.getElementById('footer-es').style.display = isEs ? 'block' : 'none';
       document.getElementById('footer-en').style.display = isEs ? 'none' : 'block';
-      document.querySelectorAll('.lang-btn').forEach((btn, i) => {
-        btn.classList.toggle('active', (i === 0) === isEs);
+      document.querySelectorAll('.lang-btn').forEach((btn, index) => {
+        btn.classList.toggle('active', (index === 0) === isEs);
       });
       document.documentElement.lang = lang;
     }
